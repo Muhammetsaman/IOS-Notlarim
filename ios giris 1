@@ -1,0 +1,31 @@
+
+- [ ] refactor işlemi  : ismini değiştirdiğim sınıfı, storyboarda aktardıktan sonra refactor işlemi yapabilirim. Bu , sınıfın ismini daha sonra değiştirsem bile tekrar main.storyboard üzerinde işlem yapmama gerek kalmayacak, isim otomatik güncellenecek. Ancak yine de kontrol etmekte fayda var.
+
+
+- [ ] Sürükle Bırak Yöntemi : Bazı işlemleri sürükle bırak yöntemiyle gerçekleştirebilirim. Örneğin hali hazırda tasarlamış olduğum yapıları sürükleyerek koda yerleştirebilirim veya sayfalar arası geçişler yaparken sürükle bırak yöntemiyle işimi hızlandırabilirim.
+				
+			
+- [ ] @IBOutlet : arayüzde ki elemanı, koda eklerken kullanacağım ama bu elemanı kafama göre kullanamam. Eğer ona sadece erişmek veya üzerinde basiit değişiklikler yapacaksam kullanmamda fayda var.
+
+- [ ] @IBAction : outletin tam tersi, bunu kullanırken belirttiğim elemanın genellikle bir fonksiyonu olur. Örneğin tıklama, dokunma gibi. Bu sayede kullanıcının bu etkileşimine karşılık verebilirim.
+
+
+- [ ] Navigation Controller: NC  ile sayfalar geçiş ve sayfalar arası bağlantı kurmak mümkün. Önceki sayfaya dönerken ve sayfaya title,promt eklemek istediğimizde kullanabiliyoruz. 
+	Önemli Not : sayfalar arası geçiş yaparken show değilde modally kullanırsam sayfa yukarıdan aşağıya çıkacak ve NC bağlantısı kopacaktır.
+
+Sayfa geçişlerinde ideal kullanım ise geçişleri tam sayfa olacak şekilde identifier ile tanımlamaktır. Bu sayede geçişler ve dönüşler daha düzgün çalışacak. Eğer ID tanımlamayıp sadece ileri geri butonlarla çalışırsak, çok sayfalı çalışmalarda ana ekrana veya sonuc ekranına geçişler çok uzun sürecek ve kullanıcıyı rahatsız edecek.
+
+PerformSegue : Tam sayfalı geçişlerde, geçişi 1 butona aktarmak isteriz bu yüzden kullanacağımız yapı performsegue yapısıdır. İd kodunu buraya yazdığımızda geçişi yapacaktır.
+	“performSegue(withIdentifier: "sonucEkraninaGecis", sender: nil)”
+
+Pop yapısı :
+
+- [ ]  	* Geri dönüşlerde popViewController yapısını kullanırız. Bu sayede bir önce ki sayfaya dönmek kolay olacaktır.
+	“Navigationcontroller?.popWievController(animated: true)”
+
+- [ ] 	*Anasayfaya direkt dönüşler için ise popRootView yapısını kullanmamız gerekecektir.
+	“Navigationcontroller?.popRootWievController(animated: true)”
+
+
+- [ ] Dismiss yapısı:  Sayfayı kapatmak için kullanılır.
+	“Self.dismiss(animated: true) “
