@@ -1,0 +1,54 @@
+TableView yapısı, Belirli bir liste ve buna bağlı bir akış oluşturmamızı sağlar.kullanılan dizilerle sorunsuz bir şekilde çalışır,bu sayede
+verileri sıralı ve doğru şekilde ekranda listelenmiş olur.
+
+
+Kullanabilmemiz için bazı protokol ve fonskiyonları bilmemiz gerekiyor;
+
+"UITableViewDelegate" ve "UITableViewDataSource" protokollerini kalıtım yoluyla eklememiz gerekiyor.
+viewDidLoad() içerisinde tableView.delegate = self ve tableView.dataSource = self atamasını yapıyoruz. Bu sayede delegasyon
+tamamlanmış olacak,uygulamamızda fonksyion ve özellikleri kullanabilmiş olacağız.
+
+İkinci adım olarak eklememiz gereken bazı fonksiyonlar mevcut. Bunlar "numberOfRowsInSection" ve "cellForRowAt" fonksiyonlarıdır.
+Burada numberOfRowsInSection fonksiyonu TableView içerisinde kaç adet hücre oluşturulacağını gösterirken, cellForRowAt ise bu hücrelerde ne gösterileceğini belirler.
+
+func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {}
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {}
+
+örneğin iki array yaratalım; 
+      let ogrenciAd = ["Ahmet","Özgür","Burak"]
+      let ogrenciYas = ["12","18","15"]
+
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  return ogrenciAd.count      // Böylece bize öğrenci adı sayısında hücre yaratacak
+  }
+
+Şimdi hücrenin içeriğini ayarlayalım. Bunun için cellForRowat kullanacağız ancak önce bir hücre oluşturalım.
+
+  let cell = tableView.dequeueReusableCell(withIdentifier: "ogrenciBilgileri")!  
+
+cell.textLabel?.text = ogrenciAd[indexPath.row]
+cell.textLabel?.text = ogrenciYas[indexPath.row]
+      
+ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+ return cell
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
