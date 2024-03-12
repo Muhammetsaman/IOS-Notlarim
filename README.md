@@ -1,4 +1,5 @@
-# ios_Notlarim
+IOS Notlarım
+
 İOS Programlama öğrenirken not edeceğim bazı kavramlar.
 
 Ana Kurs : Kasım Adalan Swift ile uygulama geliştirme
