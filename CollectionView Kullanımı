@@ -1,1 +1,22 @@
-.
+Kullanımı TableView Yapısına çok benzer ama birkaç farkı bulunmaktadır.
+
+1-) Örneğin boyutlandırma işlemlerini kod ile yapacağız.Bunun için UICollectionViewFlowLayout() yapısını kullanacağız.
+    tasarım adında bir sabit oluşturalım ve şablonumuzun hem konumlandırma hem de boyutlandırma işlemlerini yapalım.
+
+let tasarim = UICollectionViewFlowLayout()
+        tasarim.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        tasarim.minimumInteritemSpacing = 10
+        tasarim.minimumLineSpacing = 10
+        
+        // 10x10x10  =  30
+        
+        let ekranGenislik = UIScreen.main.bounds.width
+        let itemGenislik = (ekranGenislik - 30) / 2
+        
+        tasarim.itemSize = CGSize(width: itemGenislik, height: itemGenislik*1.6)
+        filmlerCollectionView.collectionViewLayout = tasarim
+
+Böylece yan yana 2 sıra olacak şekilde collection yapılarını alt alta sıraladım.
+
+
+2-) 
