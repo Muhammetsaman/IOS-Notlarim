@@ -1,0 +1,25 @@
+Basit sql fonksiyonları
+
+
+
+Urun Ekleme
+- INSERT INTO urunler(urun_adi,urun_fiyati) VALUES(“Gözlük”,1200)
+
+Urun Güncelleme
+- UPDATE ürünler SET urun_fiyati = 1200 WHERE urun_id = 5
+
+Urun Silme
+- DELETE FROM urunler where urun_id = 5
+
+Ürünleri  Tamamını Görüntüle
+- Select * From urunler
+
+Ürün Sayısını Görüntüle
+- Select count (*) as Toplam From urunler
+
+5000den Büyük Kaç ürün var?
+- Select count (*) as Toplam From urunler WHERE urun_id > 5000
+
+Ürün Adına Göre Sırala
+- Select * From urunler ORDER BY urunler_adi ASC/DESC 
+
