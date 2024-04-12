@@ -1,0 +1,18 @@
+Yaşam Döngüsü sayfalar açıldığında veya terk edildiğinde çalışan veya çalışmayan fonksiyonlardır.
+
+Görünüm Yükleme (ViewLoad): Bir görünüm yüklenirken, ilgili ViewController'deki viewDidLoad metodu çağrılır.
+Bu aşamada, ViewController'deki kullanıcı arayüzü öğelerini ayarlayabilir veya başlatıcı kodları çalıştırabiliriz.
+
+Görünüm Görünecek (View Will Appear): Bir görünüm kullanıcının ön plana çıktığı veya yeniden göründüğü zaman,
+ilgili ViewController'deki viewWillAppear metodu çağrılır. Burada, görünümle ilgili değişiklikleri güncelleyebilir veya animasyonlar ekleyebiliriz.
+
+Görünüm Göründü (View Did Appear): Bir görünüm tamamen ekranda göründüğünde, ilgili ViewController'deki viewDidAppear metodu çağrılır.
+Bu aşamada, ekranın tamamen yüklendiği ve kullanıcı etkileşimine hazır olduğu durumları işleyebiliriz.
+
+Görünüm Kaybolacak (View Will Disappear): Bir görünümün ön plana çıkmadan veya kapatılmadan önce, ilgili ViewController'deki viewWillDisappear metodu çağrılır.
+Burada, kullanıcının belirli bir görünüme veda etmesi durumunda yapılması gereken temizleme işlemlerini gerçekleştirebiliriz.
+
+Görünüm Kayboldu (View Did Disappear): Bir görünümün tamamen arka plana itildiğinde,
+ilgili ViewController'deki viewDidDisappear metodu çağrılır. Bu aşamada, geçerli görünümle ilgili temizleme veya durum güncelleme işlemlerini gerçekleştirebiliriz.
+
+Teşekkürler ChatGPT :)
