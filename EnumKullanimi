@@ -1,0 +1,29 @@
+Genelde classlarla birlikte kullanılmakla birlikte kategorilendirme işlemleri için kullanılır. Örneğin;
+
+
+
+import Foundation
+
+enum MusicianType {         **
+    case Baterist
+    case LeadGuitar
+    case Vocalist
+    case Drummer
+}
+
+Class Musicians {
+
+  var name = String
+  var age = Int
+  var instrument = String
+  var type = MusicianType   **
+
+
+init(nameInit:String,ageInit:Int,instrumentInit:String,typeInit:MusicianType) {
+name = nameInit
+age = ageInit
+instrument = instrumentInit
+type = typeInit
+}
+
+Böylece classı kullanmak istediğimde MusicianType enumunundan bir değeri kullanmak zorunda kalacağım.
