@@ -1,5 +1,4 @@
-@IBAction func saveButtonClicked(_ sender: Any) {
-        
+  
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         
@@ -19,5 +18,12 @@
         
         newPaintings.setValue(UUID(), forKey: "id")
         
+       
+        do{
+            try context.save()
+            print("succes")
+        } catch {
+            print("error")
+        }
         
     }
